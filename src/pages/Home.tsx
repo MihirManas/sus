@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 function useTypewriter(text: string, speed: number = 38, startDelay: number = 600) {
@@ -12,7 +12,7 @@ function useTypewriter(text: string, speed: number = 38, startDelay: number = 60
     const startTyping = () => {
       let i = 0;
       intervalId = window.setInterval(() => {
-        setDisplayed((prev) => text.slice(0, i + 1));
+        setDisplayed(() => text.slice(0, i + 1));
         i++;
         if (i === text.length) {
           clearInterval(intervalId);

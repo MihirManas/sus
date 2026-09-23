@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function Enroll() {
   const [currentCtc, setCurrentCtc] = useState(6);
